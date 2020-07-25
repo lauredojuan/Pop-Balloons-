@@ -13,15 +13,15 @@ function pop(event) {
   let elementId = event.target.id;
   //   console.log(elementId);
   let balloon = document.getElementById(elementId);
-  //   console.log(balloon);
-  balloon.style.background = "white";
+  // balloon.style.background = "white";
+  balloon.classList.add("away");
   counter -= 1;
   if (counter == 0) {
     location.reload();
   }
 }
 
-window.onload = function () {
+window.onload = function() {
   for (let i = 0; i < 5; i++) {
     let row = document.createElement("div");
     row.classList.add("classRow");
